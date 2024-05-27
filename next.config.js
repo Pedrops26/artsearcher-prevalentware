@@ -1,6 +1,6 @@
 module.exports = {
   experimental: {
-    appDir: true, // Habilita el App Router
+    appDir: true, 
   },
   images: {
     domains: ['lh3.googleusercontent.com',
