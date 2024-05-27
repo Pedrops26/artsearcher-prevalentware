@@ -20,11 +20,12 @@ interface Artwork {
     url: string;
   };
   principalOrFirstMaker: string;
+  objectNumber: string;
 }
 
 async function getData() {
   const res = await fetch(
-    "https://www.rijksmuseum.nl/api/nl/collection?key=KHn4xrLx&ps=15"
+    "https://www.rijksmuseum.nl/api/nl/collection?key=KHn4xrLx&ps=50"
   );
 
   if (!res.ok) {
@@ -104,7 +105,10 @@ export default function Page() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <a href={artwork.webImage.url} className="text-small underline">
+                <a
+                  href={`https://www.rijksmuseum.nl/nl/collectie/${artwork.objectNumber}`}
+                  className="text-small underline"
+                >
                   Link
                 </a>
               </CardContent>
