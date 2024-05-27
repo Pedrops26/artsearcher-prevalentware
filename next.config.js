@@ -5,7 +5,8 @@ module.exports = {
   images: {
     domains: ['lh3.googleusercontent.com',
     'lh5.ggpht.com',
-    'sothebys-com.brightspotcdn.com',],
+    'sothebys-com.brightspotcdn.com',
+    'lh6.ggpht.com',],
   },
     async rewrites() {
       return [
